@@ -8,12 +8,19 @@ interface LinkCardProps {
   icon: LucideIcon
 }
 
+declare global { interface Window { axon?: (...args: unknown[]) => void } }
+
 export function LinkCard({ title, description, href, icon: Icon }: LinkCardProps) {
+  const handleClick = () => {
+    window.axon?.('track', 'generate_lead')
+  }
+
   return (
     <motion.a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={handleClick}
       className="group relative flex w-full items-center gap-4 rounded-[20px] px-4 py-4 overflow-hidden"
       style={{
         background: "rgba(255, 255, 255, 0.45)",
