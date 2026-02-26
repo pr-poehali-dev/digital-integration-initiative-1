@@ -8,31 +8,31 @@ const links = [
   {
     title: "Мой сайт",
     description: "Портфолио и услуги",
-    href: "#",
+    href: "/test",
     icon: Globe,
   },
   {
     title: "YouTube канал",
     description: "Видео и туториалы",
-    href: "#",
+    href: "/test",
     icon: Youtube,
   },
   {
     title: "Магазин",
     description: "Товары и услуги",
-    href: "#",
+    href: "/test",
     icon: ShoppingBag,
   },
   {
     title: "Telegram",
     description: "Написать напрямую",
-    href: "#",
+    href: "/test",
     icon: Send,
   },
   {
     title: "Бесплатные материалы",
     description: "Шаблоны и гайды",
-    href: "#",
+    href: "/test",
     icon: FileText,
   },
 ]

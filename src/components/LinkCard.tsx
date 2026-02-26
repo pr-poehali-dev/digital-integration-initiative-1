@@ -18,9 +18,7 @@ export function LinkCard({ title, description, href, icon: Icon }: LinkCardProps
   return (
     <motion.a
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={handleClick}
+      onClick={(e) => { if (href.startsWith('/')) { e.preventDefault(); handleClick(); window.location.href = href } else handleClick() }}
       className="group relative flex w-full items-center gap-4 rounded-[20px] px-4 py-4 overflow-hidden"
       style={{
         background: "rgba(255, 255, 255, 0.45)",
