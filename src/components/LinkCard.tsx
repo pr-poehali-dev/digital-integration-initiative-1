@@ -12,7 +12,7 @@ declare global { interface Window { axon?: (...args: unknown[]) => void } }
 
 export function LinkCard({ title, description, href, icon: Icon }: LinkCardProps) {
   const handleClick = () => {
-    window.axon?.('track', 'GenerateLead')
+    window.axon?.('track', 'generate_lead')
   }
 
   return (

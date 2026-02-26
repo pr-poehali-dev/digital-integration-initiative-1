@@ -16,7 +16,7 @@ try {
 } catch (e) { void e }
 
 window.addEventListener('load', () => {
-  window.axon?.('track', 'PageView')
+  window.axon?.('track', 'page_view')
 })
 
 createRoot(document.getElementById("root")!).render(<App />);
