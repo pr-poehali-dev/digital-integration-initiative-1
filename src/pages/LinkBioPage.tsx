@@ -1,6 +1,9 @@
 import { motion } from "framer-motion"
 import { ProfileSection } from "@/components/ProfileSection"
 
+// ✏️ СЮДА ВСТАВЬ СВОЮ ССЫЛКУ:
+const BUTTON_HREF = "https://example.com"
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -171,13 +174,15 @@ export function LinkBioPage() {
           <ProfileSection
             name="RedCross"
             bio=""
-            imageUrl="/images/544291433-18043960274659947-5766591717842883293-n.jpg"
+            imageUrl="https://cdn.poehali.dev/projects/f9a23f0e-04fe-403d-a26e-bde979c14310/bucket/8609845e-ba3c-479d-878a-eefbddcffafe.jpg"
           />
         </motion.div>
 
         <motion.div variants={itemVariants}>
           <motion.a
-            href="#"
+            href={BUTTON_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => window.axon?.('track', 'generate_lead')}
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
