@@ -1,47 +1,5 @@
 import { motion } from "framer-motion"
 import { ProfileSection } from "@/components/ProfileSection"
-import { LinkCard } from "@/components/LinkCard"
-import { SocialFooter } from "@/components/SocialFooter"
-import { Globe, Youtube, Mail, ShoppingBag, FileText, MessageCircle, Send } from "lucide-react"
-
-const links = [
-  {
-    title: "Мой сайт",
-    description: "Портфолио и услуги",
-    href: "/test",
-    icon: Globe,
-  },
-  {
-    title: "YouTube канал",
-    description: "Видео и туториалы",
-    href: "/test",
-    icon: Youtube,
-  },
-  {
-    title: "Магазин",
-    description: "Товары и услуги",
-    href: "/test",
-    icon: ShoppingBag,
-  },
-  {
-    title: "Telegram",
-    description: "Написать напрямую",
-    href: "/test",
-    icon: Send,
-  },
-  {
-    title: "Бесплатные материалы",
-    description: "Шаблоны и гайды",
-    href: "/test",
-    icon: FileText,
-  },
-]
-
-const socials = [
-  { icon: Send, href: "#", label: "Telegram" },
-  { icon: MessageCircle, href: "#", label: "WhatsApp" },
-  { icon: Mail, href: "#", label: "Email" },
-]
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -207,26 +165,31 @@ export function LinkBioPage() {
         initial="hidden"
         animate="visible"
         variants={containerVariants}
-        className="relative z-10 mx-auto max-w-[400px] w-full flex flex-col flex-1 justify-between"
+        className="relative z-10 mx-auto max-w-[400px] w-full flex flex-col flex-1 items-center justify-center gap-10"
       >
-        <motion.div variants={itemVariants} className="pt-2">
+        <motion.div variants={itemVariants}>
           <ProfileSection
-            name="GlassLinks"
-            bio="Креативный дизайнер и разработчик"
+            name="RedCross"
+            bio=""
             imageUrl="/images/544291433-18043960274659947-5766591717842883293-n.jpg"
           />
         </motion.div>
 
-        <motion.div className="space-y-3 py-8" variants={containerVariants}>
-          {links.map((link) => (
-            <motion.div key={link.title} variants={itemVariants}>
-              <LinkCard {...link} />
-            </motion.div>
-          ))}
-        </motion.div>
-
-        <motion.div variants={itemVariants} className="pb-2">
-          <SocialFooter socials={socials} copyright="2025 GlassLinks" />
+        <motion.div variants={itemVariants}>
+          <motion.a
+            href="#"
+            onClick={() => window.axon?.('track', 'generate_lead')}
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: "spring", stiffness: 400, damping: 25 }}
+            className="block px-10 py-4 rounded-2xl text-white font-semibold text-base text-center"
+            style={{
+              background: "linear-gradient(135deg, #dc2626, #b91c1c)",
+              boxShadow: "0 4px 20px rgba(220, 38, 38, 0.4), 0 2px 8px rgba(0,0,0,0.1)",
+            }}
+          >
+            Получить 4340
+          </motion.a>
         </motion.div>
       </motion.div>
     </main>
