@@ -1,8 +1,8 @@
-import { motion } from "framer-motion"
-import { ProfileSection } from "@/components/ProfileSection"
+import { motion } from "framer-motion";
+import { ProfileSection } from "@/components/ProfileSection";
 
 // ✏️ СЮДА ВСТАВЬ СВОЮ ССЫЛКУ:
-const BUTTON_HREF = "https://example.com"
+const BUTTON_HREF = "https://oo-zestful-youthfulness.up.railway.app/pr/15M7gim";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -13,7 +13,7 @@ const containerVariants = {
       delayChildren: 0.15,
     },
   },
-}
+};
 
 const itemVariants = {
   hidden: {
@@ -29,7 +29,7 @@ const itemVariants = {
       damping: 25,
     },
   },
-}
+};
 
 export function LinkBioPage() {
   return (
@@ -40,7 +40,8 @@ export function LinkBioPage() {
       <motion.div
         className="fixed z-0 w-[500px] h-[500px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(147, 51, 234, 0.25) 0%, transparent 70%)",
+          background:
+            "radial-gradient(circle, rgba(147, 51, 234, 0.25) 0%, transparent 70%)",
           filter: "blur(60px)",
           top: "-10%",
           left: "-10%",
@@ -60,7 +61,8 @@ export function LinkBioPage() {
       <motion.div
         className="fixed z-0 w-[600px] h-[600px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(236, 72, 153, 0.2) 0%, transparent 70%)",
+          background:
+            "radial-gradient(circle, rgba(236, 72, 153, 0.2) 0%, transparent 70%)",
           filter: "blur(80px)",
           top: "30%",
           right: "-20%",
@@ -80,7 +82,8 @@ export function LinkBioPage() {
       <motion.div
         className="fixed z-0 w-[450px] h-[450px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%)",
+          background:
+            "radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%)",
           filter: "blur(70px)",
           bottom: "-5%",
           left: "20%",
@@ -100,7 +103,8 @@ export function LinkBioPage() {
       <motion.div
         className="fixed z-0 w-[350px] h-[350px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%)",
+          background:
+            "radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%)",
           filter: "blur(50px)",
           top: "60%",
           left: "-5%",
@@ -139,7 +143,8 @@ export function LinkBioPage() {
         style={{
           width: "200%",
           height: "100px",
-          background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)",
+          background:
+            "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)",
           transform: "rotate(-35deg)",
           top: "20%",
           left: "-50%",
@@ -183,14 +188,15 @@ export function LinkBioPage() {
             href={BUTTON_HREF}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => window.axon?.('track', 'generate_lead')}
+            onClick={() => window.axon?.("track", "generate_lead")}
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
             className="block px-10 py-4 rounded-2xl text-white font-semibold text-base text-center"
             style={{
               background: "linear-gradient(135deg, #dc2626, #b91c1c)",
-              boxShadow: "0 4px 20px rgba(220, 38, 38, 0.4), 0 2px 8px rgba(0,0,0,0.1)",
+              boxShadow:
+                "0 4px 20px rgba(220, 38, 38, 0.4), 0 2px 8px rgba(0,0,0,0.1)",
             }}
           >
             Получить 4340
@@ -198,5 +204,5 @@ export function LinkBioPage() {
         </motion.div>
       </motion.div>
     </main>
-  )
+  );
 }
